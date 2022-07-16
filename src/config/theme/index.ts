@@ -60,6 +60,9 @@ const theme = {
 
     size: (val: number | string) => ({ width: val, height: val }),
     br: (val: number | string) => ({ borderRadius: val }),
+
+    // transition
+    tt: (bol: boolean) => ({ transition: bol ? 'all .3s ease-in-out' : null }),
   };
 
 const stitchesConfig = createStitches({
@@ -77,9 +80,6 @@ export const globalStyle = stitchesConfig.globalCss({
     padding: 0,
     boxSizing: 'border-box',
     fontFamily: 'Montserrat',
-  },
-  body: {
-    backgroundColor: '$bg',
   },
 });
 
