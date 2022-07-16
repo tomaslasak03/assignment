@@ -3,13 +3,14 @@ import ThemeProvider from '@config/theme/Provider';
 import { HomeS } from './style';
 
 // Layouts
-import { Header } from '@layouts';
+import { Header, Title } from '@layouts';
 
 const Home: React.FC = () => {
   return (
     <ThemeProvider>
       <HomeS>
         <Header />
+        <Title />
       </HomeS>
     </ThemeProvider>
   );
