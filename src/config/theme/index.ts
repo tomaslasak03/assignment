@@ -2,10 +2,11 @@ import { createStitches } from '@stitches/react';
 
 const theme = {
     colors: {
-      bg: '#ffffff',
+      bg: '#f9f9f9',
       bg_invert: '#000000',
       bg_light: '#f9f9f9',
       bg_box: '#ffffff',
+      bg_buttons: '#ffffff',
 
       txt: '#000000',
       txt_invert: '#ffffff',
@@ -77,6 +78,9 @@ export const globalStyle = stitchesConfig.globalCss({
     boxSizing: 'border-box',
     fontFamily: 'Montserrat',
   },
+  body: {
+    backgroundColor: '$bg',
+  },
 });
 
 export const darkTheme = stitchesConfig.createTheme('darkTheme', {
@@ -105,7 +109,8 @@ export const darkTheme = stitchesConfig.createTheme('darkTheme', {
     bg: '#141414',
     bg_invert: '#ffffff',
     bg_light: '#2f2f2f',
-    bg_box: '#343434',
+    bg_box: '#252525',
+    bg_buttons: '#343434',
 
     txt: '#ffffff',
     txt_invert: '#000000',
