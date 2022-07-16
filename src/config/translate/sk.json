@@ -1,0 +1,34 @@
+{
+  "title": "Prehľad štartov rakiet",
+  "table": {
+    "mission": "Názov misie",
+    "rocket": "Názov rakety",
+    "date": "Dátum letu",
+    "reuse": "Opätovné pokusy",
+    "status": "Stav"
+  },
+  "options": {
+    "title": "Nastavenia tabuľky",
+    "hint": "zoradiť | ukázať"
+  },
+  "language:": {
+    "title": "Jazyky",
+    "sk": "Slovensky",
+    "en": "Anglicky"
+  },
+  "modal": {
+    "title": "Informácie",
+    "name": "Názov rakety",
+    "coresF": "Počet letov",
+    "coresR": "Počet opätovných pokusov",
+    "coresS": "Status jadra",
+    "land": "Pristátie",
+    "success": "úspešné",
+    "Unsuccessful": "neúspešné",
+    "unknown": "neznáme",
+    "payloadT": "Payload type",
+    "payloadMkg": "Payload mass (kg)",
+    "payloadMlbs": "Payload mass (lbs)",
+    "article": "Článok"
+  }
+}

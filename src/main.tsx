@@ -4,6 +4,9 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { createClient, Provider } from 'urql';
 
+// Language config
+import '@config/translate';
+
 const client = createClient({
   url: 'https://api.spacex.land/graphql',
 });
