@@ -47,7 +47,7 @@ const theme = {
     mr: (val: number | string) => ({ marginRight: val }),
     ml: (val: number | string) => ({ marginLeft: val }),
     mb: (val: number | string) => ({ marginBottom: val }),
-    mx: (val: number | string) => ({ marginLeft: val, Marginright: val }),
+    mx: (val: number | string) => ({ marginLeft: val, MarginRight: val }),
     my: (val: number | string) => ({ marginTop: val, marginBottom: val }),
 
     // Margin
@@ -55,7 +55,7 @@ const theme = {
     pr: (val: number | string) => ({ paddingRight: val }),
     pl: (val: number | string) => ({ paddingLeft: val }),
     pb: (val: number | string) => ({ paddingBottom: val }),
-    px: (val: number | string) => ({ paddingLeft: val, paddingright: val }),
+    px: (val: number | string) => ({ paddingLeft: val, paddingRight: val }),
     py: (val: number | string) => ({ paddingTop: val, paddingBottom: val }),
 
     size: (val: number | string) => ({ width: val, height: val }),
