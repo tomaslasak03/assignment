@@ -43,23 +43,23 @@ const theme = {
   },
   utils = {
     // Margin
-    mt: (val: number) => ({ marginTop: val }),
-    mr: (val: number) => ({ marginRight: val }),
-    ml: (val: number) => ({ marginLeft: val }),
-    mb: (val: number) => ({ marginBottom: val }),
-    mx: (val: number) => ({ marginLeft: val, Marginright: val }),
-    my: (val: number) => ({ marginTop: val, marginBottom: val }),
+    mt: (val: number | string) => ({ marginTop: val }),
+    mr: (val: number | string) => ({ marginRight: val }),
+    ml: (val: number | string) => ({ marginLeft: val }),
+    mb: (val: number | string) => ({ marginBottom: val }),
+    mx: (val: number | string) => ({ marginLeft: val, Marginright: val }),
+    my: (val: number | string) => ({ marginTop: val, marginBottom: val }),
 
     // Margin
-    pt: (val: number) => ({ paddingTop: val }),
-    pr: (val: number) => ({ paddingRight: val }),
-    pl: (val: number) => ({ paddingLeft: val }),
-    pb: (val: number) => ({ paddingBottom: val }),
-    px: (val: number) => ({ paddingLeft: val, paddingright: val }),
-    py: (val: number) => ({ paddingTop: val, paddingBottom: val }),
+    pt: (val: number | string) => ({ paddingTop: val }),
+    pr: (val: number | string) => ({ paddingRight: val }),
+    pl: (val: number | string) => ({ paddingLeft: val }),
+    pb: (val: number | string) => ({ paddingBottom: val }),
+    px: (val: number | string) => ({ paddingLeft: val, paddingright: val }),
+    py: (val: number | string) => ({ paddingTop: val, paddingBottom: val }),
 
-    size: (val: number) => ({ width: val, height: val }),
-    br: (val: number) => ({ borderRadius: val }),
+    size: (val: number | string) => ({ width: val, height: val }),
+    br: (val: number | string) => ({ borderRadius: val }),
   };
 
 const stitchesConfig = createStitches({
