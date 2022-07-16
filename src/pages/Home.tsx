@@ -1,7 +1,8 @@
 import React from 'react';
+import ThemeProvider from '@config/theme/Provider';
 
 const Home: React.FC = () => {
-  return <div>Home</div>;
+  return <ThemeProvider>Home</ThemeProvider>;
 };
 
 export default Home;
