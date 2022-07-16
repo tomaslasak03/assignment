@@ -37,8 +37,12 @@ const theme = {
       video: '1200px',
     },
     shadows: {
-      light: '0px 4px 15px #00000005',
-      dark: '0px 4px 10px #00000015',
+      light: '0px 4px 15px #00000015',
+      dark: '0px 4px 10px #00000025',
+    },
+    radii: {
+      1: '8px',
+      2: '12px',
     },
   },
   utils = {
@@ -109,7 +113,7 @@ export const darkTheme = stitchesConfig.createTheme('darkTheme', {
     bg: '#141414',
     bg_invert: '#ffffff',
     bg_light: '#2f2f2f',
-    bg_box: '#252525',
+    bg_box: '#303030',
     bg_buttons: '#343434',
 
     txt: '#ffffff',
@@ -122,6 +126,10 @@ export const darkTheme = stitchesConfig.createTheme('darkTheme', {
   shadows: {
     light: '0px 0px 0px transparent',
     dark: '0px 0px 0px transparent',
+  },
+  radii: {
+    1: '8px',
+    2: '12px',
   },
 });
 
