@@ -8,6 +8,7 @@ export const OptionsS = styled('div', {
 });
 
 export const OptionBtnS = styled('span', {
+  position: 'relative',
   cursor: 'pointer',
   display: 'flex',
   alignItems: 'center',

@@ -1,10 +1,10 @@
 {
-  "title": "Prehľad raketových \n štartov",
+  "title": "Prehľad \n raketových štartov",
   "table": {
     "mission": "Názov misie",
     "rocket": "Názov rakety",
     "date": "Dátum letu",
-    "reuse": "Opätovné pokusy",
+    "reuse": "Opätovné použitie",
     "status": "Stav"
   },
   "options": {

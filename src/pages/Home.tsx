@@ -3,7 +3,7 @@ import ThemeProvider from '@config/theme/Provider';
 import { HomeS } from './style';
 
 // Layouts
-import { Header, Title } from '@layouts';
+import { Header, Title, Table } from '@layouts';
 
 const Home: React.FC = () => {
   return (
@@ -11,6 +11,7 @@ const Home: React.FC = () => {
       <HomeS>
         <Header />
         <Title />
+        <Table />
       </HomeS>
     </ThemeProvider>
   );

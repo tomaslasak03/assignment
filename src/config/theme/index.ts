@@ -18,7 +18,7 @@ const theme = {
     fontSizes: {
       xsm: '10px',
       sm: '14px',
-      md: '18px',
+      md: '16px',
       lg: '26px',
       xlg: '64px',
     },
@@ -28,6 +28,7 @@ const theme = {
       3: '20px',
       4: '30px',
       5: '50px',
+      6: '120px',
     },
     sizes: {
       box: '40px',
@@ -91,7 +92,7 @@ export const darkTheme = stitchesConfig.createTheme('darkTheme', {
   fontSizes: {
     xsm: '10px',
     sm: '14px',
-    md: '18px',
+    md: '16px',
     lg: '26px',
     xlg: '64px',
   },
@@ -101,6 +102,7 @@ export const darkTheme = stitchesConfig.createTheme('darkTheme', {
     3: '20px',
     4: '30px',
     5: '50px',
+    6: '120px',
   },
   sizes: {
     box: '40px',
@@ -112,7 +114,7 @@ export const darkTheme = stitchesConfig.createTheme('darkTheme', {
   colors: {
     bg: '#141414',
     bg_invert: '#ffffff',
-    bg_light: '#2f2f2f',
+    bg_light: '#343434',
     bg_box: '#303030',
     bg_buttons: '#343434',
 
