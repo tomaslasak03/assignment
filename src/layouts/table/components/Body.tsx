@@ -58,6 +58,11 @@ const Body: React.FC = () => {
             <Loader />
           </TableLoading>
         )}
+        {error && (
+          <TableLoading>
+            <Loader />
+          </TableLoading>
+        )}
       </InfiniteScroll>
     </TableBodyS>
   );

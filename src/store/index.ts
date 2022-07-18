@@ -6,11 +6,6 @@ type Theme = {
   toggleTheme: () => void;
 };
 
-type Popup = {
-  open: boolean;
-  toggleOpen: () => void;
-};
-
 type Order = {
   order: Array<any>;
   setOrder: (oldPos: number, newPos: number) => void;
@@ -20,11 +15,6 @@ type Order = {
 export const themeStore = create<Theme>((set) => ({
   theme: localStorage.getItem('theme') || 'light',
   toggleTheme: () => set((state) => ({ theme: state.theme === 'light' ? 'dark' : 'light' })),
-}));
-
-export const popStore = create<Popup>((set) => ({
-  open: false,
-  toggleOpen: () => set((state) => ({ open: !state.open })),
 }));
 
 const move = (from: number, to: number, arr: Array<any>) => {

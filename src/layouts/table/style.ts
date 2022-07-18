@@ -104,3 +104,12 @@ export const TableLoading = styled('div', {
   tt: true,
   backgroundColor: '$bg_box',
 });
+
+export const Table = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  py: '$3',
+  tt: true,
+  backgroundColor: '$bg_box',
+});
