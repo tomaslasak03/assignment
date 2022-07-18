@@ -1,5 +1,4 @@
 import create from 'zustand';
-import { devtools } from 'zustand/middleware';
 
 type Theme = {
   theme: string;
@@ -19,6 +18,7 @@ export const themeStore = create<Theme>((set) => ({
 
 const move = (from: number, to: number, arr: Array<any>) => {
   const newArr = [...arr];
+  console.log(newArr);
 
   const item = newArr.splice(from, 1)[0];
   newArr.splice(to, 0, item);
@@ -26,37 +26,31 @@ const move = (from: number, to: number, arr: Array<any>) => {
   return newArr;
 };
 
-export const tableOrderCheck = create(
-  devtools<Order>(
-    (set) => ({
-      order: [
-        { title: 'table.mission', check: true, index: 'mission' },
-        { title: 'table.rocket', check: true, index: 'rocket' },
-        { title: 'table.date', check: true, index: 'date' },
-        { title: 'table.reuse', check: true, index: 'reuse' },
-        { title: 'table.status', check: true, index: 'status' },
-      ],
-      setOrder: (oldPos, newPos) =>
-        set((state) => {
-          const order = move(oldPos, newPos, state.order);
-          return { order };
-        }),
-      setCheck: (position) =>
-        set((state) => {
-          const oldOrder = state.order;
-          const order = oldOrder.map((o, id: number) => {
-            if (id === position) {
-              const newOrder = o;
-              newOrder.check = !o.check;
-              return newOrder;
-            }
-            return o;
-          });
-          return { order };
-        }),
+export const tableOrderCheck = create<Order>((set) => ({
+  order: [
+    { title: 'table.mission', check: true, index: 'mission' },
+    { title: 'table.rocket', check: true, index: 'rocket' },
+    { title: 'table.date', check: true, index: 'date' },
+    { title: 'table.reuse', check: true, index: 'reuse' },
+    { title: 'table.status', check: true, index: 'status' },
+  ],
+  setOrder: (oldPos, newPos) =>
+    set((state) => {
+      const order = move(oldPos, newPos, state.order);
+      return { order };
     }),
-    {
-      name: 'tableOrderCheck',
-    },
-  ),
-);
+  setCheck: (position) =>
+    set((state) => {
+      const oldOrder = state.order;
+      const checked = oldOrder.filter((o) => o.check);
+      const order = oldOrder.map((o, id: number) => {
+        if (id === position) {
+          const newOrder = o;
+          newOrder.check = o.check ? (checked.length > 2 ? false : true) : true;
+          return newOrder;
+        }
+        return o;
+      });
+      return { order };
+    }),
+}));

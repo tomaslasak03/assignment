@@ -36,19 +36,19 @@ const Body: React.FC = () => {
           <TableRowS onClick={() => navigate(`/${row.id}`)} key={`table-body_${_id}`}>
             {order.map((item: any, __id: number) => (
               <React.Fragment key={`table_body_item_${__id}_row_${_id}`}>
-                {item.index === 'mission' && (
+                {item.index === 'mission' && item.check && (
                   <span className='tableBodyItem'>{row.mission_name}</span>
                 )}
-                {item.index === 'rocket' && (
+                {item.index === 'rocket' && item.check && (
                   <span className='tableBodyItem'>{row.rocket.rocket_name}</span>
                 )}
-                {item.index === 'date' && <DateItem date={row.launch_date_local} />}
-                {item.index === 'reuse' && (
+                {item.index === 'date' && item.check && <DateItem date={row.launch_date_local} />}
+                {item.index === 'reuse' && item.check && (
                   <span className='tableBodyItem'>
                     {row.rocket.first_stage.cores[0].core.reuse_count}
                   </span>
                 )}
-                {item.index === 'status' && (
+                {item.index === 'status' && item.check && (
                   <StatusItem status={!!row.rocket.first_stage.cores[0].land_success} />
                 )}
               </React.Fragment>

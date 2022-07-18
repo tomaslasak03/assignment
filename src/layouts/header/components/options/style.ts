@@ -5,6 +5,11 @@ export const OptionsS = styled('div', {
   alignItems: 'center',
   justifyContent: 'center',
   gap: '$3',
+  position: 'relative',
+});
+
+export const FakeSetting = styled('span', {
+  width: '$popup',
 });
 
 export const OptionBtnS = styled('span', {

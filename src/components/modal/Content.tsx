@@ -15,7 +15,6 @@ interface ContentProps {
 }
 
 const Content: React.FC<ContentProps> = ({ data }) => {
-  console.log((parseInt('1200px'.split('px')[0]) / 16) * 9 + 'px');
   const video = data.links.video_link.includes('https://youtu.be/')
     ? data.links.video_link.split('https://youtu.be/')[1]
     : data.links.video_link.split('https://www.youtube.com/watch?v=')[1] || null;

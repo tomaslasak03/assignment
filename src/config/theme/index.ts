@@ -32,7 +32,7 @@ const theme = {
     },
     sizes: {
       box: '40px',
-      popup: '160px',
+      popup: '200px',
       table: '1600px',
       modal: '1400px',
     },
@@ -109,7 +109,7 @@ export const darkTheme = stitchesConfig.createTheme('darkTheme', {
   },
   sizes: {
     box: '40px',
-    popup: '160px',
+    popup: '200px',
     table: '1600px',
     modal: '1400px',
   },
@@ -118,7 +118,7 @@ export const darkTheme = stitchesConfig.createTheme('darkTheme', {
     bg_invert: '#ffffff',
     bg_light: '#343434',
     bg_box: '#303030',
-    bg_buttons: '#343434',
+    bg_buttons: '#3f3f3f',
 
     txt: '#ffffff',
     txt_invert: '#000000',

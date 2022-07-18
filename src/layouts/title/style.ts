@@ -2,7 +2,7 @@ import { styled } from '@config/theme';
 
 export const TitleS = styled('div', {
   width: '100%',
-  py: '$5',
+  pb: '$5',
   h1: {
     tt: true,
     color: '$txt',
