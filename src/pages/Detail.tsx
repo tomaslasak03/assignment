@@ -1,7 +1,12 @@
 import React from 'react';
+import Modal from '@components/modal';
+import { Navigate, useParams } from 'react-router-dom';
 
 const Detail: React.FC = () => {
-  return <div>Detail</div>;
+  const { id } = useParams();
+  if (!id) return <Navigate to='/' replace={true} />;
+
+  return <Modal />;
 };
 
 export default Detail;

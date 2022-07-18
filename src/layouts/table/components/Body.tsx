@@ -6,8 +6,10 @@ import { useQuery } from 'urql';
 import { CheckIcon, Cross2Icon } from '@radix-ui/react-icons';
 import { tableOrderCheck, themeStore } from '@store';
 import SyncLoader from 'react-spinners/ClipLoader';
+import { useNavigate } from 'react-router-dom';
 
 const Body: React.FC = () => {
+  const navigate = useNavigate();
   const { order } = tableOrderCheck((s) => s);
   const [offset, setOffset] = React.useState<number>(0);
   const [tableData, setTableData] = React.useState<Array<object>>([]);
@@ -31,7 +33,7 @@ const Body: React.FC = () => {
         hasMore={data?.launchesPast.length === 0 ? false : true}
       >
         {tableData.map((row: any, _id: number) => (
-          <TableRowS key={`table-body_${_id}`}>
+          <TableRowS onClick={() => navigate(`/${row.id}`)} key={`table-body_${_id}`}>
             {order.map((item: any, __id: number) => (
               <React.Fragment key={`table_body_item_${__id}_row_${_id}`}>
                 {item.index === 'mission' && (

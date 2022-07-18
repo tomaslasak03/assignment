@@ -30,5 +30,6 @@
     "payloadMkg": "Payload mass (kg)",
     "payloadMlbs": "Payload mass (lbs)",
     "article": "Článok"
-  }
+  },
+  "error": "Niečo sa pokazilo!"
 }

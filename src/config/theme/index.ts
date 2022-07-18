@@ -35,7 +35,6 @@ const theme = {
       popup: '160px',
       table: '1600px',
       modal: '1400px',
-      video: '1200px',
     },
     shadows: {
       light: '0px 4px 15px #00000015',
@@ -64,6 +63,10 @@ const theme = {
     py: (val: number | string) => ({ paddingTop: val, paddingBottom: val }),
 
     size: (val: number | string) => ({ width: val, height: val }),
+    ratio169: (val: number) => ({
+      width: val,
+      height: (val / 16) * 9,
+    }),
     br: (val: number | string) => ({ borderRadius: val }),
 
     // transition
@@ -109,7 +112,6 @@ export const darkTheme = stitchesConfig.createTheme('darkTheme', {
     popup: '160px',
     table: '1600px',
     modal: '1400px',
-    video: '1200px',
   },
   colors: {
     bg: '#141414',

@@ -5,4 +5,5 @@ export const HomeS = styled('div', {
   minHeight: '100vh',
   backgroundColor: '$bg',
   tt: true,
+  position: 'relative',
 });
